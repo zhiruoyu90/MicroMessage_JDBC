@@ -29,7 +29,7 @@ public class ListServlet extends HttpServlet {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/micro_message?useUnicode=true&amp;characterEncoding=UTF-8", "root", "wang110");
-
+//            缓存前端参数
             StringBuilder sqlBuiler = new StringBuilder("select id, command, description, content from message where 1 = 1 ");
             List<String> paramList = new ArrayList<String>();
             if(null != qCommand && !("").equals(qCommand)) {
